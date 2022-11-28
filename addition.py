@@ -6,29 +6,29 @@
 
 
 def main():
-    # this function adds user numbers except negative numbers
-    while True:
-        # main function
-        try:
-            total_numbers = []
-            # input
-            amount_num = int(input("Input the amount of numbers you want to add: "))
-            print()
-            # process
-            for addition in range(amount_num):
-                amount_num = int(input("Enter a number: "))
-                if amount_num < 0:
-                    continue
-                total_numbers.append(amount_num)
-            # output
-            print()
-            print("The sum of all positive numbers is: ", sum(total_numbers))
-        except ValueError:
-            print("That is not a valid input.")
-            continue
-        # break out of loop
-        else:
-            break
+    # this is a number guessing game
+    loop_counter = 0
+    answer = 0
+
+    # input
+    loop_number = input("Enter the amount of integers you want to add: ")
+
+    # process
+    try:
+        int_loops = int(loop_number)
+        while loop_counter < int_loops:
+            user_string = input("Enter an integer: ")
+            int_user = int(user_string)
+            if int_user > 0:
+                answer = answer + int_user
+            else:
+                loop_counter = loop_counter + 1
+                continue
+            loop_counter = loop_counter + 1
+        print("The sum of all positive integers is: {0}.".format(answer))
+    except ValueError:
+        print("That is not a valid input.")
+    # output
 
     print("\nDone.")
 
