@@ -11,31 +11,26 @@ def main():
         # main function
         try:
             total_numbers = []
-
             # input
-            number = int(input("Input the amount of numbers you want to add: "))
+            amount_num = int(input("Input the amount of numbers you want to add: "))
             print()
-
             # process
-            for addition in range(number):
-                numbers = int(input("Enter a number: "))
-
-                if numbers < 0:
+            for addition in range(amount_num):
+                amount_num = int(input("Enter a number: "))
+                if amount_num < 0:
                     continue
-
-                total_numbers.append(numbers)
-
+                total_numbers.append(amount_num)
             # output
             print()
             print("The sum of all positive numbers is: ", sum(total_numbers))
-
         except ValueError:
-            print("Invalid Input")
+            print("That is not a valid input.")
             continue
-
         # break out of loop
         else:
             break
+
+    print("\nDone.")
 
 
 if __name__ == "__main__":
